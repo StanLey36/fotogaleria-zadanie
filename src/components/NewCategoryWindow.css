@@ -1,0 +1,48 @@
+.input {
+    position: relative;
+}
+
+.input__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.25rem .25rem;
+    margin: 0.525rem .525rem; 
+    background: pink;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: white;
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+    color: grey; 
+}
+
+.input__field {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 1px solid currentColor;
+    padding: .75rem .5rem;
+    margin: 0 0 1.188rem;
+    color: currentColor;
+    background: transparent;
+    border-radius: 4px;
+}
+
+
+.input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+    color: #000;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 560px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    border-radius: .5rem;
+}
